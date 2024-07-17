@@ -4,10 +4,11 @@ export const ItemContext = createContext(null);
 
 const ItemContextProvider = ({ children }) => {
   const [term, setTerm] = useState(null);
-
+const [author, setAuthor] = useState(null);
+const [page, setPage] = useState(0)
 
   return (
-    <ItemContext.Provider value={{ term, setTerm }}>{children}</ItemContext.Provider>
+    <ItemContext.Provider value={{ term, setTerm, page, setPage }}>{children}</ItemContext.Provider>
   );
 };
 

@@ -12,7 +12,7 @@ function App() {
     <>
       <div>
         
-        <Header text={"Google Books"}></Header>
+        <Header ></Header>
         <Card/>
         <ItemContextProvider>
         <BooksPage/>
