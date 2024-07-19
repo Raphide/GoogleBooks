@@ -69,3 +69,14 @@
     font-size: 0.75em;
     margin-bottom: 0;
 }
+
+.modal{
+  &_show {
+    display: contents;
+
+  } 
+  &_hide{
+
+display: none;
+  }
+}

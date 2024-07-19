@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./BookCard.module.scss";
+import BookModal from "../BookModal/BookModal";
+import { ModalContext } from "../../contexts/ModalContextProvider";
+import { ItemContext } from "../../contexts/ItemContextProvider";
 
-const BookCard = ({ book }) => {
+const BookCard = ({ book, onClick }) => {
+  const { bookData } = useContext(ItemContext);
+  const { modal, toggleModal } = useContext(ModalContext);
+  const [selectedBook, setSelectedBook] = useState([]);
+  // useEffect(() => {
+  //   setSelectedBook(book);
+  // }, [modal]);
+
   const thumbnail =
     book.volumeInfo &&
     book.volumeInfo.imageLinks &&
@@ -11,7 +21,13 @@ const BookCard = ({ book }) => {
 
   const authorsArray = book.volumeInfo.authors;
 
-  console.log(authorsArray);
+  // console.log(authorsArray);
+
+  //need to use useParams?
+
+  const handleClick = () => {
+    onClick(book);
+  }
 
   return (
     <div className={styles.card}>
@@ -26,18 +42,13 @@ const BookCard = ({ book }) => {
       >
         <div className={styles.overlay}>
           <h4>{book.volumeInfo.subtitle}</h4>
-          <button>See more</button>
+          <button onClick={handleClick}>See more</button>
         </div>
       </div>
-
       <div className={styles.text}>
         <h1 className={styles.title}>{book.volumeInfo.title}</h1>
-        {authorsArray.length > 1 ? (
-          <h3 className={styles.author}>{authorsArray[0]}, ...</h3>
-        ) : (
-          <h3 className={styles.author}>{authorsArray[0]}</h3>
-        )}
       </div>
+      {/* {modal && <BookModal book={selectedBook} />} */}
     </div>
   );
 };
@@ -49,3 +60,9 @@ export default BookCard;
 // {authorsArray.map((author, index) => (
 //   <h3 className={styles.author} key={index} author={author}>{author}</h3>
 // ))}
+
+// {authorsArray.length > 1 ? (
+//   <h3 className={styles.author}>{authorsArray[0]}, ...</h3>
+// ) : (
+//   <h3 className={styles.author}>{authorsArray[0]}</h3>
+// )}

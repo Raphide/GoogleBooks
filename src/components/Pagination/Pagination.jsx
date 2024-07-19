@@ -6,6 +6,8 @@ const Pagination = ({currentPage}) => {
   const { setPage } = useContext(ItemContext);
   const [pageCount, setPageCount] = useState(1)
 
+ console.log(currentPage);
+
   return (
     <nav className={styles.body} aria-label="Page navigation">
       <button className={styles.prev} onClick={()=> {setPage(currentPage - 20), setPageCount(pageCount - 1)}}>Prev</button>

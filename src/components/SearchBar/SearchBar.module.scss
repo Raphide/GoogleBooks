@@ -1,0 +1,26 @@
+@use "../../partials/queries.scss" as q;
+
+.searchbar {
+  height: 2em;
+  border: none;
+  border-radius: 200px 0px 0px 200px;
+  padding-left: 10px;
+  background-color: white;
+}
+
+.button {
+  height: 2.25em;
+  border: none;
+  border-radius: 0px 200px 200px 0px;
+  &:hover{
+    background-color: #FBBC04;
+  }
+}
+
+form{
+    box-shadow: -1px 1px 12px 2px rgba(0,0,0,0.3);
+    border-radius: 200px 200px 200px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

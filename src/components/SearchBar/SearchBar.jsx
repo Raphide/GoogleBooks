@@ -1,3 +1,5 @@
+import styles from "./SearchBar.module.scss"
+
 const SearchBar = ({ placeholder, onSearch }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -7,8 +9,8 @@ const SearchBar = ({ placeholder, onSearch }) => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" placeholder={placeholder} name="search" />
-      <button>Search</button>
+      <input className={styles.searchbar} type="text" placeholder={placeholder} name="search" />
+      <button className={styles.button}>Search</button>
     </form>
   );
 };

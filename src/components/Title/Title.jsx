@@ -4,7 +4,7 @@ import { ItemContext } from "../../contexts/ItemContextProvider";
 const Title = ({ text }) => {
   const { term } = useContext(ItemContext);
 
-  if (term !== null || term !== "") {
+  if (term !== null) {
     text = `Searching for ${term}`;
   }
 

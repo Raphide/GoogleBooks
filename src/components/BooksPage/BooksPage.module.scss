@@ -1,9 +1,21 @@
-.books {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 2fr 2fr 2fr; 
-    gap: 5px 5px; 
-    justify-content: center;
-    align-items: flex-start;
+@use "../../partials/queries.scss" as q;
 
+.books {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 2fr 2fr;
+  gap: 5px 5px;
+  justify-content: center;
+  align-items: flex-start;
+  @include q.phone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr;
+    gap: 5px 5px;
+  }
+  @include q.laptop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr;
+  }
 }

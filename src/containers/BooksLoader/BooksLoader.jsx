@@ -2,13 +2,17 @@ import React, { useContext, useEffect, useState } from "react";
 import { ItemContext } from "../../contexts/ItemContextProvider";
 import { getBooks } from "../../services/getBooks";
 import BookCard from "../../components/BookCard/BookCard";
-
+import Loader from "../../assets/loader.svg";
+import { ModalContext } from "../../contexts/ModalContextProvider";
+import BookModal from "../../components/BookModal/BookModal";
 
 const BooksLoader = () => {
-  const { term, page } = useContext(ItemContext);
-  const [bookData, setBookData] = useState(null);
+  const { term, page, bookData, setBookData } = useContext(ItemContext);
+  // const { modal, toggleModal } = useContext(ModalContext);
+  const [selectedBook, setSelectedBook] = useState([]);
   const [fetchStatus, setFetchStatus] = useState("");
   const [error, setError] = useState(null);
+  const [modal, setModal] = useState(false);
 
   useEffect(() => {
     if (term === null) return;
@@ -25,16 +29,37 @@ const BooksLoader = () => {
       });
   }, [term, page]);
 
+  // useEffect(() => {
+  //   setSelectedBook();
+  //   console.log(selectedBook);
+  //   setModal();
+  // }, [selectedBook, modal]);
+
+  //   const totalItems = {bookData}.length;
+  // console.log(totalItems)
+  // const lastPage = totalItems % 20;
+  // console.log(lastPage)
+
+  //bookmodal should be here
+  //selected book set selectred book
+  //onclick on the bookcard handleclick(book)
+
+
+  const onClick = (book) => {
+    setSelectedBook(book);
+    setModal(!modal);
+  }
+
+
   return (
     <>
-      
       {fetchStatus === "loading" && <p>Loading Books...</p>}
       {fetchStatus === "success" &&
         bookData.map((book) => (
-          <BookCard key={book.id} book={book} />
+          <BookCard key={book.id} book={book} onClick={onClick} />
         ))}
       {fetchStatus === "failure" && <p>{error.message}</p>}
-     
+      {modal && <BookModal key={selectedBook.id} book={selectedBook} />}
     </>
   );
 };
