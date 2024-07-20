@@ -21,7 +21,7 @@ const BooksLoader = () => {
       .then((data) => {
         setFetchStatus("success");
         setBookData(data);
-        // console.log(bookData);
+        // console.log(data.length);
       })
       .catch((error) => {
         setFetchStatus("failure");
@@ -59,7 +59,7 @@ const BooksLoader = () => {
           <BookCard key={book.id} book={book} onClick={onClick} />
         ))}
       {fetchStatus === "failure" && <p>{error.message}</p>}
-      {modal && <BookModal key={selectedBook.id} book={selectedBook} />}
+      {modal && <BookModal key={selectedBook.id} book={selectedBook} onClick={onClick} />}
     </>
   );
 };

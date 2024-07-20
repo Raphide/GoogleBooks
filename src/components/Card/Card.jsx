@@ -1,8 +1,7 @@
 const Card = () => {
     return(
         <div>
-            <h2>Books!</h2>
-            <p>Here there be books!</p>
+            <p>Use the search bar bellow to search through Google's Google Book API</p>
         </div>
     )
 }

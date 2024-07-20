@@ -15,47 +15,48 @@
     .g{
         margin:0;
         color: #4285F4;
-        font-family: "Kumbh Sans", sans-serif;
+        
     font-weight: 600;
     font-style: normal;
     }
     .o{
         margin:0;
         color: #EA4335;
-        font-family: "Kumbh Sans", sans-serif;
+        
     font-weight: 600;
     font-style: normal;
     }
     .o2{
         margin:0;
         color: #FBBC04;
-        font-family: "Kumbh Sans", sans-serif;
+        
     font-weight: 600;
     font-style: normal;
     }
     .g2{
         margin:0;
         color: #4285F4;
-        font-family: "Kumbh Sans", sans-serif;
+        
     font-weight: 600;
     font-style: normal;
     }
     .l{
         margin:0;
         color: #34A853;
-        font-family: "Kumbh Sans", sans-serif;
+        
     font-weight: 600;
     font-style: normal;
     }
     .e{
         margin:0;
         color: #EA4335;
-        font-family: "Kumbh Sans", sans-serif;
+     
     font-weight: 600;
     font-style: normal;
     }
     .books{
         margin: 0;
+        font-weight: 500;
     }
     @include q.phone {
       font-size: 2em;

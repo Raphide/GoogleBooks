@@ -14,19 +14,17 @@ const BooksPage = () => {
     setPage(0);
   };
 
-
-
   return (
-    <div>
-      <Title text="Books" />
-      <main>
+    <main>
+      <div className={styles.search}>
+        <Title text="Books" />
         <SearchBar placeholder={"search for books"} onSearch={onSearch} />
         <Pagination currentPage={page} />
-        <div className={styles.books}>
-          <BooksLoader page={page} />
-        </div>
-      </main>
-    </div>
+      </div>
+      <div className={styles.books}>
+        <BooksLoader page={page} />
+      </div>
+    </main>
   );
 };
 

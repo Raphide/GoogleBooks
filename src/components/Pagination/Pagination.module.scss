@@ -2,36 +2,34 @@
   margin: 1em;
   color: #202124;
   align-self: center;
-  
-  .prev {
-    height: 3em;
+  button {
+    height: 2.5em;
     width: 5em;
     font-size: 1em;
     border: none;
     border-radius: 15%;
     font-family: "Kumbh Sans", sans-serif;
     font-weight: 500;
-    &:hover {
-      background-color: #4285F4;
-    }
     &:active{
-        background-color: #174EA6;
+      size-adjust: 0.95%;
     }
-  }
+ 
+    &.prev {
+      &:hover {
+        background-color: #4285f4;
+      }
+      &:active {
+        background-color: #174ea6;
+      }
+    }
 
-  .next {
-    height: 3em;
-    width: 5em;
-    font-size: 1em;
-    border: none;
-    border-radius: 15%;
-    font-family: "Kumbh Sans", sans-serif;
-    font-weight: 500;
-    &:hover {
-      background-color: #fbbc04;
-    }
-    &:active{
-        background-color: #E37400;
+    &.next {
+      &:hover {
+        background-color: #fbbc04;
+      }
+      &:active {
+        background-color: #e37400;
+      }
     }
   }
 

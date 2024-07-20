@@ -27,7 +27,7 @@ const BookCard = ({ book, onClick }) => {
 
   const handleClick = () => {
     onClick(book);
-  }
+  };
 
   return (
     <div className={styles.card}>
@@ -47,6 +47,11 @@ const BookCard = ({ book, onClick }) => {
       </div>
       <div className={styles.text}>
         <h1 className={styles.title}>{book.volumeInfo.title}</h1>
+        {authorsArray > 1 ? (
+          <h3 className={styles.author}>{authorsArray[0]}, and others</h3>
+        ) : (
+          <h3 className={styles.author}>{authorsArray}</h3>
+        )}
       </div>
       {/* {modal && <BookModal book={selectedBook} />} */}
     </div>
@@ -66,3 +71,7 @@ export default BookCard;
 // ) : (
 //   <h3 className={styles.author}>{authorsArray[0]}</h3>
 // )}
+
+// {authorsArray?.map((author, index) => (
+//   <h3 className={styles.author} key={index} >{author}</h3>
+// ))}

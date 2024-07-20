@@ -8,7 +8,7 @@ const Title = ({ text }) => {
     text = `Searching for ${term}`;
   }
 
-  return <h2>{text}</h2>;
+  return <h3>{text}</h3>;
 };
 
 export default Title;
