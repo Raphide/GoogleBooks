@@ -1,3 +1,5 @@
+@use "../../partials/queries.scss" as q;
+
 .bar{
     display: flex;
     flex-direction: column;
@@ -7,4 +9,10 @@
         color: #9AA0A6;
         margin: none;
     }
+    @include q.phone {
+        display: none;
+        }
+        @include q.laptop {
+          display: flex;
+        }
 }

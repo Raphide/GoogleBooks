@@ -5,13 +5,16 @@ import Card from "./components/Card/Card";
 import BooksPage from "./components/BooksPage/BooksPage";
 import ItemContextProvider from "./contexts/ItemContextProvider";
 import ModalContextProvider from "./contexts/ModalContextProvider";
-import styles from "./Appstyle/App.module.scss"
-import { LeftSide } from "./components/Sides/LeftSide";
+import styles from "./Appstyle/App.module.scss";
+import LeftSide from "./components/Sides/LeftSide";
+import RightSide from "./components/Sides/RightSide";
 
 function App() {
   return (
     <>
-   <div className={styles.left}><LeftSide/></div>
+      <div className={styles.left}>
+        <LeftSide />
+      </div>
       <div className={styles.mainapp}>
         <Header></Header>
         <Card />
@@ -21,7 +24,9 @@ function App() {
           </ModalContextProvider>
         </ItemContextProvider>
       </div>
-      <div className={styles.left}><LeftSide/></div>
+      <div className={styles.left}>
+        <RightSide />
+      </div>
     </>
   );
 }

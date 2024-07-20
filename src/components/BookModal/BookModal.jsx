@@ -16,20 +16,34 @@ const BookModal = ({ book, onClick }) => {
 
   const handleClick = () => {
     onClick();
-  }
+  };
 
   console.log(volumeInfo.title);
   return (
     <div className={styles.modal}>
-      <button onClick={handleClick}>Close</button>
-      <h1>{volumeInfo.title}</h1>
-      {authorsArray?.map((author, index) => (
-        <h3 className={styles.author} key={index}>
-          {author}
-        </h3>
-      ))}
-      <h4>{volumeInfo?.publisher} ({volumeInfo?.publishedDate})</h4>
-      <p>{volumeInfo?.description}</p>
+      <div className={styles.modal_yellow}>
+        <div className={styles.modal_blue}>
+          <div className={styles.modal_red}>
+            <button className={styles.close} onClick={handleClick}>
+              X         
+            </button>
+            <div className={styles.modal_white}>
+              <div className={styles.content}>
+                <h1>{volumeInfo.title}</h1>
+                {authorsArray?.map((author, index) => (
+                  <h3 className={styles.author} key={index}>
+                    {author}
+                  </h3>
+                ))}
+                <h4>
+                  {volumeInfo?.publisher} ({volumeInfo?.publishedDate})
+                </h4>
+                <p>{volumeInfo?.description}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

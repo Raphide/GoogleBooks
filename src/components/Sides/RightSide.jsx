@@ -4,12 +4,9 @@ import BookBlue from "../../assets/GoogleBookBlue.svg";
 import BookYellow from "../../assets/GoogleBookYellow.svg";
 import BookGreen from "../../assets/GoogleBookGreen.svg";
 import BookRed from "../../assets/GoogleBookRed.svg";
-
-const LeftSide = () => {
+const RightSide = () => {
   return (
     <div className={styles.bar}>
-      <img src={BookBlue} />
-      <h1>x</h1>
       <img src={BookRed} />
       <h1>o</h1>
       <img src={BookYellow} />
@@ -19,7 +16,10 @@ const LeftSide = () => {
       <img src={BookGreen} />
       <h1>x</h1>
       <img src={BookRed} />
+      <h1>x</h1>
+      <img src={BookBlue} />
     </div>
   );
 };
- export default LeftSide;
+
+export default RightSide;

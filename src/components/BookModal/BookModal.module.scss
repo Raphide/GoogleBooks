@@ -1,3 +1,5 @@
+@use "../../partials/queries.scss" as q;
+
 .modal {
   justify-self: center;
   align-self: center;
@@ -6,12 +8,97 @@
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
+  flex-direction: column;
   height: 600px;
   width: 500px;
-  background-color: rgb(255, 179, 179);
-  z-index: 3;
-  padding: 20px;
-  p {
-    overflow-y: scroll;
+  background-color: #34A853;
+  z-index: 5;
+
+  &_yellow {
+    height: 100%;
+    width: 100%;
+    background-color: #fbbc04;
+    border-radius: 94px 0px 94px 94px;
+    margin: 0;
+  }
+  &_blue {
+    height: 100%;
+    width: 100%;
+    background-color: #4285f4;
+    border-radius: 94px 94px 94px 0px;
+    margin: 0;
+  }
+  &_red {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #ea4335;
+    border-radius: 0px 94px 94px 94px;
+    margin: 0;
+    overflow: hidden;
+    &:hover {
+      background-color: #a50e0e;
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 60px;
+      align-self: flex-start;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      text-align: start;
+      background-color: #ea4335;
+      border: none;
+      color: white;
+      font-size: 2em;
+      z-index: 5;
+      overflow: hidden;
+      
+    }
+  }
+
+  &_white {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 130px 94px 0px 94px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 4;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      
+
+      p {
+        overflow-y: scroll;
+        padding: 20px;
+        max-height: 45%;
+      }
+    }
+  }
+  @include q.phone {
+    height: 700px;
+    width: 370px;
+    p {
+      overflow-y: scroll;
+    }
+  }
+  @include q.laptop {
+    height: 600px;
+    width: 500px;
   }
 }
