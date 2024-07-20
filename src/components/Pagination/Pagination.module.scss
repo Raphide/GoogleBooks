@@ -16,19 +16,22 @@
  
     &.prev {
       &:hover {
-        background-color: #4285f4;
+        background-color: #fbbc04;
       }
       &:active {
-        background-color: #174ea6;
+        background-color: #e37400;
       }
     }
 
     &.next {
       &:hover {
-        background-color: #fbbc04;
+        background-color: #34A853;
       }
       &:active {
-        background-color: #e37400;
+        background-color: #0D652D;
+      }
+      &:disabled{
+        background-color: #F1F3F4;
       }
     }
   }

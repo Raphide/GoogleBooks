@@ -3,6 +3,7 @@ import styles from "./BookCard.module.scss";
 import BookModal from "../BookModal/BookModal";
 import { ModalContext } from "../../contexts/ModalContextProvider";
 import { ItemContext } from "../../contexts/ItemContextProvider";
+import NoCover from "../../assets/NoCover.svg"
 
 const BookCard = ({ book, onClick }) => {
   const { bookData } = useContext(ItemContext);
@@ -36,7 +37,7 @@ const BookCard = ({ book, onClick }) => {
         style={{
           backgroundImage: `url(${
             thumbnail ||
-            `https://upload.wikimedia.org/wikipedia/commons/7/72/Placeholder_book.svg`
+            NoCover
           })`,
         }}
       >

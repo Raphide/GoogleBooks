@@ -55,7 +55,7 @@ const BooksLoader = () => {
     <>
       {fetchStatus === "loading" && <p>Loading Books...</p>}
       {fetchStatus === "success" &&
-        bookData.map((book) => (
+        bookData?.map((book) => (
           <BookCard key={book.id} book={book} onClick={onClick} />
         ))}
       {fetchStatus === "failure" && <p>{error.message}</p>}
