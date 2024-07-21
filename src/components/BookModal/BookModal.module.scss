@@ -192,7 +192,7 @@
         }
       }
       .info{
-        
+        align-self: flex-start;
         justify-self: flex-start;
        max-width: 50%;
         display: flex;
@@ -202,22 +202,25 @@
       }
       .read{
        
-        height: 50%;
+      
         width: 100%;
         max-width: 50%;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         justify-content: flex-start;
-        align-items: flex-start;
-        text-wrap: wrap;
+        align-items: center;
+      
+        .links{
+          height:100px;
+          margin-bottom: 30px;
+        }
       }
     }
   }
   overflow: hidden;
   @include q.phone {
-    height: 700px;
-    width: 410px;
+    height: 80%;
+    width: 95%;
   
   }
   @include q.laptop {

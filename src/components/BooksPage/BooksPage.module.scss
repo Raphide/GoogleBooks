@@ -47,9 +47,15 @@ main{
 
 }
 
-// img{
-//   width:100%;
-// }
+.bookshelf{
+  width: 500px;
+  @include q.phone {
+    width: 300px;
+  }
+  @include q.laptop {
+    width: 500px;
+  }
+}
 
 
 

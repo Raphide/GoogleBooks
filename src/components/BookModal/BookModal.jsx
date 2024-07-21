@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./BookModal.module.scss";
+import preview from "../../assets/preview.svg";
+import readHere from "../../assets/readHere.svg"
 
 const BookModal = ({ book, onClick }) => {
   const { volumeInfo, ...rest } = book;
@@ -93,10 +95,10 @@ const BookModal = ({ book, onClick }) => {
                     </div>
                     <div className={styles.read}>
                       {volumeInfo.previewLink && (
-                        <a href={volumeInfo?.previewLink} target="_blank">Preview</a>
+                        <a href={volumeInfo?.previewLink} target="_blank"><img src={preview} alt="Preview" className={styles.links}/></a>
                       )}
                       {book.accessInfo.webReaderLink && (
-                        <a href={book.accessInfo?.webReaderLink} target="_blank">Read here</a>
+                        <a href={book.accessInfo?.webReaderLink} target="_blank"><img  src={readHere} alt="Read Here" className={styles.links}/></a>
                       )}
                     </div>
                   </span>

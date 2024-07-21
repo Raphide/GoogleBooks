@@ -4,6 +4,7 @@ import BookModal from "../BookModal/BookModal";
 import { ModalContext } from "../../contexts/ModalContextProvider";
 import { ItemContext } from "../../contexts/ItemContextProvider";
 import NoCover from "../../assets/NoCover.svg"
+import seeMore from "../../assets/seeMore.svg"
 
 const BookCard = ({ book, onClick }) => {
   const { bookData } = useContext(ItemContext);
@@ -42,8 +43,7 @@ const BookCard = ({ book, onClick }) => {
         }} onClick={handleClick}
       >
         <div className={styles.overlay}>
-          <h5>Click for more information on this title</h5>
-          <button className={styles.seeMore} onClick={handleClick}>See more</button>
+          <img src={seeMore} onClick={handleClick}/>
         </div>
       </div>
       <div className={styles.text}>

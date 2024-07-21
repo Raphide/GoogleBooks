@@ -41,7 +41,7 @@
   justify-content: center;
   height: 200px;
   width: 132px;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.75);
   z-index: -1;
   opacity: 0;
   transform: translateY(50px);
@@ -92,11 +92,3 @@
   }
 }
 
-.seeMore{
-background-color: v.$googleBlue;
-color: white;
-border:none;
-border-radius: 40px;
-height:6em;
-width:6em;
-}

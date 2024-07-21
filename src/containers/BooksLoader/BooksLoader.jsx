@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ItemContext } from "../../contexts/ItemContextProvider";
-import { getBooks } from "../../services/getBooks";
+import { getBooks, getBooksByAuthor } from "../../services/getBooks";
 import BookCard from "../../components/BookCard/BookCard";
 import Loader from "../../assets/loader.svg";
 import { ModalContext } from "../../contexts/ModalContextProvider";
 import BookModal from "../../components/BookModal/BookModal";
 
 const BooksLoader = () => {
-  const { term, page, bookData, setBookData } = useContext(ItemContext);
+  const { term, page, author, bookData, setBookData } = useContext(ItemContext);
   // const { modal, toggleModal } = useContext(ModalContext);
   const [selectedBook, setSelectedBook] = useState([]);
   const [fetchStatus, setFetchStatus] = useState("");
@@ -29,19 +29,19 @@ const BooksLoader = () => {
   }, [term, page]);
 
   // useEffect(() => {
-  //   setSelectedBook();
-  //   console.log(selectedBook);
-  //   setModal();
-  // }, [selectedBook, modal]);
+  //   if (author === null) return;
+  //   setFetchStatus("loading");
+  //   getBooksByAuthor(author, page)
+  //     .then((data) => {
+  //       setFetchStatus("success");
+  //       setBookData(data);
+  //     })
+  //     .catch((error) => {
+  //       setFetchStatus("failure");
+  //       setError(error);
+  //     });
+  // }, [author, page]);
 
-  //   const totalItems = {bookData}.length;
-  // console.log(totalItems)
-  // const lastPage = totalItems % 20;
-  // console.log(lastPage)
-
-  //bookmodal should be here
-  //selected book set selectred book
-  //onclick on the bookcard handleclick(book)
 
 
   const onClick = (book) => {
