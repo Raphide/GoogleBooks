@@ -55,10 +55,10 @@ const BooksLoader = () => {
     <>
       {fetchStatus === "loading" && <p>Loading Books...</p>}
       {fetchStatus === "success" &&
-        bookData?.map((book) => (
+        bookData.books.map((book) => (
           <BookCard key={book.id} book={book} onClick={onClick} />
         ))}
-      {fetchStatus === "failure" && <p>{error.message}</p>}
+      {fetchStatus === "failure" && <p style={{color:"red"}}>{error.message}</p>}
       {modal && <BookModal key={selectedBook.id} book={selectedBook} onClick={onClick} />}
     </>
   );

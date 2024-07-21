@@ -1,3 +1,7 @@
+/* #root{
+    max-width: 90vw;
+} */
+
 body {
     display:flex;
     flex-direction: column;
@@ -7,5 +11,6 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #202124;
+    margin:0;
 }
 

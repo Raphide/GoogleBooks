@@ -48,7 +48,7 @@ const BookCard = ({ book, onClick }) => {
       </div>
       <div className={styles.text}>
         <h1 className={styles.title}>{book.volumeInfo.title}</h1>
-        {authorsArray > 1 ? (
+        {authorsArray?.length > 1 ? (
           <h3 className={styles.author}>{authorsArray[0]}, and others</h3>
         ) : (
           <h3 className={styles.author}>{authorsArray}</h3>

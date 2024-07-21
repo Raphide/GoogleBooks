@@ -13,9 +13,9 @@ const LeftSide = () => {
       <img src={BookRed} style={{transform:"rotate(-35deg)"}}/>
       <h1>O</h1>
       <img src={BookYellow} style={{transform:"rotate(35deg)"}}/>
-      <h1>X</h1>
+      <h1>&</h1>
       <img src={BookBlue} style={{transform:"rotate(-35deg)"}}/>
-      <h1>O</h1>
+      <h1>?</h1>
       <img src={BookGreen} style={{transform:"rotate(35deg)"}}/>
       <h1>:D</h1>
       <img src={BookRed} style={{transform:"rotate(-35deg)"}}/>

@@ -52,8 +52,10 @@ const BookModal = ({ book, onClick }) => {
                 <div className={styles.content}>
                   <h5>Description</h5>
                   <p>{volumeInfo?.description}</p>
-                  <p>Page count: {volumeInfo?.pageCount}</p>
-                  <p>Rating: {volumeInfo.averageRating} ({volumeInfo.ratingsCount})</p>
+                  <p>Page count: {volumeInfo?.pageCount > 0 ? (`${volumeInfo.pageCount}`) : ("page count unavailable")}</p>
+                  <p>Rating: {(!volumeInfo.averageRating) ? ("Not yet rated") : (`${volumeInfo.averageRating} (${volumeInfo.ratingsCount})`)}</p>
+                  <p>Language: {volumeInfo?.language}</p>
+                  <p>Maturity Rating: {(!volumeInfo.maturityRating) ? ("Not yet rated") : (`${volumeInfo.maturityRating}`)}</p>
                 </div>
               </div>
             </div>

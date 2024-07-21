@@ -59,7 +59,7 @@
         font-weight: 500;
     }
     @include q.phone {
-      font-size: 2em;
+      font-size: 1.75em;
       }
       @include q.laptop {
         font-size: 4em

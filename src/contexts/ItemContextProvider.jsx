@@ -8,8 +8,6 @@ const [author, setAuthor] = useState(null);
 const [page, setPage] = useState(0)
 const [bookData, setBookData] = useState([]);
 
-
-
   return (
     <ItemContext.Provider value={{ term, setTerm, page, setPage, bookData, setBookData }}>{children}</ItemContext.Provider>
   );
