@@ -12,15 +12,14 @@ export const getBooks = async (term, page = 0) => {
     throw new Error("Failed to fetch books");
   }
   const data = await response.json();
-  const totalpages = 20 % data.totalItems;
-  console.log(totalpages);
+
   if(data.totalItems == 0){
     throw new Error("No results found :(")
   }
 
   const bookData = {
     books: data.items,
-    totalpages: totalpages
+    id: data.id,
    };
   // const cleanedUpBook = {
   //   id: bookData.id,

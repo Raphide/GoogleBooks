@@ -1,7 +1,13 @@
+@use "../../partials/variables" as v;
+
 .body {
   margin: 1em;
-  color: #202124;
+  color: v.$googleBlack;
   align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   button {
     height: 2.5em;
     width: 5em;
@@ -10,36 +16,49 @@
     border-radius: 15%;
     font-family: "Kumbh Sans", sans-serif;
     font-weight: 500;
+    scale: 100%;
+        transition: 0.2s ease-in-out;
     &:active{
       size-adjust: 0.95%;
     }
  
     &.prev {
       &:hover {
-        background-color: #fbbc04;
+        background-color: v.$googleYellow;
+        scale: 105%;
+        transition: 0.2s ease-in-out;
       }
       &:active {
-        background-color: #e37400;
+        background-color: v.$googleYellowDark;
+        scale: 95%;
+        transition: 0.2s ease-in-out
       }
     }
 
     &.next {
       &:hover {
-        background-color: #34A853;
+        background-color: v.$googleGeen;
+        scale: 105%;
+        transition: 0.2s ease-in-out;
       }
       &:active {
-        background-color: #0D652D;
+        background-color: v.$googleGeenDark;
+        scale: 95%;
+        transition: 0.2s ease-in-out
       }
       &:disabled{
-        background-color: #F1F3F4;
+        background-color: v.$googleGreyLight;
       }
     }
   }
 
   .count {
-    margin: 1em;
+    margin: 0em 1em 0em 1em;
     font-size: 1.5em;
     font-family: "Kumbh Sans", sans-serif;
     font-weight: 600;
+    text-align: center;
+    width: 35px;
+    max-width: 35px;
   }
 }

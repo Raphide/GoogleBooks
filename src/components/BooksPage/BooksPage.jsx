@@ -5,6 +5,7 @@ import BooksLoader from "../../containers/BooksLoader/BooksLoader";
 import styles from "./BooksPage.module.scss";
 import Pagination from "../Pagination/Pagination";
 import Title from "../Title/Title";
+import Bookshelf from "../../assets/bookshelf.svg"
 
 const BooksPage = () => {
   const { page, term, setTerm, setPage } = useContext(ItemContext);
@@ -24,6 +25,7 @@ const BooksPage = () => {
       <div className={styles.books}>
         <BooksLoader page={page} />
       </div>
+      <div><img src={Bookshelf} /></div>
     </main>
   );
 };

@@ -21,7 +21,6 @@ const BooksLoader = () => {
       .then((data) => {
         setFetchStatus("success");
         setBookData(data);
-        // console.log(data.length);
       })
       .catch((error) => {
         setFetchStatus("failure");
@@ -55,7 +54,7 @@ const BooksLoader = () => {
     <>
       {fetchStatus === "loading" && <p>Loading Books...</p>}
       {fetchStatus === "success" &&
-        bookData.books.map((book) => (
+        bookData?.books.map((book) => (
           <BookCard key={book.id} book={book} onClick={onClick} />
         ))}
       {fetchStatus === "failure" && <p style={{color:"red"}}>{error.message}</p>}

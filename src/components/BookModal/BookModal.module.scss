@@ -1,6 +1,7 @@
 @use "../../partials/queries.scss" as q;
+@use "../../partials/variables" as v;
 
-.backdrop{
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,34 +23,42 @@
   flex-direction: row;
   height: 600px;
   width: 500px;
-  background-color: #34A853;
-  z-index: 5;
+  background-color: v.$googleGeen;
+  z-index: 3;
 
   &_yellow {
     height: 100%;
     width: 100%;
-    background-color: #fbbc04;
+    background-color: v.$googleYellow;
     border-radius: 94px 0px 94px 94px;
     margin: 0;
+    z-index: 4;
   }
   &_blue {
     height: 100%;
     width: 100%;
-    background-color: #4285f4;
+    background-color: v.$googleBlue;
     border-radius: 94px 94px 94px 0px;
     margin: 0;
+    z-index: 5;
   }
   &_red {
-    position: relative;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    height: 50%;
     width: 100%;
-    background-color: #ea4335;
-    border-radius: 0px 94px 94px 94px;
-    margin: 0;
+
+    // max-height: 50%;
+    background-color: v.$googleRed;
+    border-radius: 0px 94px 0px 0px;
+    margin: 0em;
+    padding-bottom: 15%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
+    z-index: 6;
 
     .close {
       position: absolute;
@@ -60,41 +69,56 @@
       border-radius: 60px;
       align-self: flex-start;
       border-radius: 0px 0px 30px 0px;
-      background-color: #ea4335;
+      background-color: v.$googleRed;
       transition: 0.2s ease-in;
       border: none;
       color: white;
       font-size: 1.75em;
-      z-index: 5;
-     
+      z-index: 7;
+
       &:hover {
-        background-color: #a50e0e;
+        background-color: v.$googleRedDark;
         transition: 0.2s ease-in;
       }
     }
     .content {
+      height: 55%;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: 8px;
+        background-color: v.$googleRed;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: v.$googleRedDark;
+      }
 
-   
-      h1{
-        margin: 1em 2em 0em 2em;
+      h1 {
+        margin: 0.5em 2em 0em 2em;
         max-height: 150px;
         overflow-y: scroll;
+        &::-webkit-scrollbar {
+          width: 5px;
+          height: 8px;
+          background-color: v.$googleRed;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: v.$googleRedDark;
+        }
       }
-      h3{
+      h3 {
         margin: 0.25em;
       }
-      h5{
-        margin: 0em 0em 0.5em 0em;
-      }
-      p{
+
+      p {
         font-size: 0.75em;
         margin: 0em 0em 0.5em 0em;
       }
-      span{
+      span {
         display: flex;
         flex-direction: row;
         white-space: pre;
@@ -103,50 +127,111 @@
   }
 
   &_white {
-    height: 100%;
+    height: 70%;
     width: 100%;
-    max-height: 75%;
+    max-height: 70%;
     max-width: 100%;
     background-color: #ffffff;
     border-radius: 0px 94px 94px 94px;
     margin: 0;
     padding-top: 10px;
+    // padding-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     position: absolute;
     bottom: 0;
-   
+    left: 0;
+    z-index: 8;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .content {
+      height: fit-content;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      
+      margin-top: 0.5em;
+      padding-bottom: 3em;
+
+      h5 {
+        margin: 0em 0em 0.5em 0em;
+        font-size: 1em;
+      }
 
       p {
-        overflow-y: scroll;
-        padding: 20px;
+        
         max-height: 150px;
         font-size: 1em;
+        margin: 0.5em 0em;
+      }
+      span {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        white-space: pre;
+        margin: 0;
+        width: 100%;
+        
+      }
+      .description {
+        padding-left: 20px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          width: 5px;
+          height: 8px;
+          background-color: v.$googleGreyLight;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: v.$googleBlack;
+        }
+      }
+      .info{
+        
+        justify-self: flex-start;
+       max-width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-wrap: wrap;
+      }
+      .read{
+       
+        height: 50%;
+        width: 100%;
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-wrap: wrap;
       }
     }
   }
   overflow: hidden;
   @include q.phone {
     height: 700px;
-    width: 370px;
-    p {
-      overflow-y: scroll;
-    }
+    width: 410px;
+  
   }
   @include q.laptop {
     height: 600px;
-    width: 500px;
+    width: 700px;
   }
 }
-::-webkit-scrollbar {
-  display: none;
+
+.layout {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }

@@ -39,11 +39,11 @@ const BookCard = ({ book, onClick }) => {
             thumbnail ||
             NoCover
           })`,
-        }}
+        }} onClick={handleClick}
       >
         <div className={styles.overlay}>
-          <h4>{book.volumeInfo.subtitle}</h4>
-          <button onClick={handleClick}>See more</button>
+          <h5>Click for more information on this title</h5>
+          <button className={styles.seeMore} onClick={handleClick}>See more</button>
         </div>
       </div>
       <div className={styles.text}>

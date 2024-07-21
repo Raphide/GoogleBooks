@@ -1,4 +1,5 @@
 @use "../../partials/queries.scss" as q;
+@use "../../partials/variables" as v;
 
 .searchbar {
   height: 2em;
@@ -17,8 +18,10 @@
   height: 2.25em;
   border: none;
   border-radius: 0px 200px 200px 0px;
+  transition: 0.2s ease-in-out;
   &:hover{
-    background-color: #FBBC04;
+    background-color: v.$googleBlue;
+    transition: 0.2s ease-in-out;
   }
 }
 

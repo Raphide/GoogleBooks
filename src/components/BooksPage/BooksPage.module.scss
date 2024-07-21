@@ -1,4 +1,5 @@
 @use "../../partials/queries.scss" as q;
+@use "../../partials/variables" as v;
 
 .books {
   margin-top: 5%;
@@ -12,7 +13,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr;
-    gap: 5px 5px;
+    gap: 0;
   }
   @include q.laptop {
     display: grid;
@@ -45,6 +46,10 @@ main{
 // }
 
 }
+
+// img{
+//   width:100%;
+// }
 
 
 

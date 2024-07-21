@@ -1,15 +1,31 @@
+@use "../partials/queries.scss" as q;
+@use "../partials/variables" as v;
+
 .mainapp {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    // width: 96%;
-    font-family: "Kumbh Sans", sans-serif;;
-    font-weight: 400;
-    font-style: normal;
-    color: #202124;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 96%;
+  min-width: 70%;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: v.$googleBlack;
+  @include q.phone {
+    width: 100vw;
+  }
+  @include q.laptop {
+  }
 }
 
-.left{
-    
-}
+// .left {
+//     @include q.phone {
+//         display: none;
+//       }
+// }
+// .right {
+//     @include q.phone {
+//         display: none;
+//       }
+// }

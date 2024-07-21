@@ -1,4 +1,5 @@
 @use "../../partials/queries.scss" as q;
+@use "../../partials/variables" as v;
 
 .header{
     margin:0;
@@ -7,49 +8,49 @@
     flex-direction: row;
     justify-content: center;
     white-space: pre;
-    color: #202124;
+    color: v.$googleBlack;
     font-family: "Kumbh Sans", sans-serif;
     font-weight: 100;
     font-style: normal;
     color: #202124;
     .g{
         margin:0;
-        color: #4285F4;
+        color: v.$googleBlue;
         
     font-weight: 600;
     font-style: normal;
     }
     .o{
         margin:0;
-        color: #EA4335;
+        color: v.$googleRed;
         
     font-weight: 600;
     font-style: normal;
     }
     .o2{
         margin:0;
-        color: #FBBC04;
+        color: v.$googleYellow;
         
     font-weight: 600;
     font-style: normal;
     }
     .g2{
         margin:0;
-        color: #4285F4;
+        color: v.$googleBlue;
         
     font-weight: 600;
     font-style: normal;
     }
     .l{
         margin:0;
-        color: #34A853;
+        color: v.$googleGeen;
         
     font-weight: 600;
     font-style: normal;
     }
     .e{
         margin:0;
-        color: #EA4335;
+        color: v.$googleRed;
      
     font-weight: 600;
     font-style: normal;

@@ -1,45 +1,55 @@
-.card{
+@use "../../partials/queries.scss" as q;
+@use "../../partials/variables" as v;
 
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-    margin-top: 3%;
-    height: 285px;
-    max-height: 285px;
-   width: 170px;
-   max-width: 200px;
-  
+  margin-top: 3%;
+  height: 285px;
+  max-height: 285px;
+  width: 170px;
+  max-width: 200px;
+  @include q.phone {
+  }
+  @include q.laptop {
+  }
 }
 
 .cover {
-    position: relative;
-    height:200px;
-    width:132px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 100%;
-    z-index: 1;
-    &:hover {
-      transition: 0.5s ease;
-    }
+  position: relative;
+  height: 200px;
+  width: 132px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  z-index: 1;
+  &:hover {
     transition: 0.5s ease;
-    overflow: hidden;
+  }
+  transition: 0.5s ease;
+  overflow: hidden;
 }
 .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  height:200px;
-  width:132px;
+  justify-content: center;
+  height: 200px;
+  width: 132px;
   background-color: rgba(255, 255, 255, 0.95);
   z-index: -1;
   opacity: 0;
-  transform: translateY(0px);
+  transform: translateY(50px);
+
+  
+  @include q.phone {
+    display: none;
+  }
 
   &:hover {
     opacity: 1;
@@ -50,37 +60,43 @@
   transition: 0.5s ease;
 }
 
-.text{
-
+.text {
   bottom: 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 30%;
-    overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 30%;
+  overflow: hidden;
 }
 
 .title {
- font-size: 1em;
- margin: 0;
- margin-bottom: 3px;
+  font-size: 1em;
+  margin: 0;
+  margin-bottom: 3px;
 }
 
-.author{
-    font-size: 0.75em;
-    margin: 0.2em;
-    overflow: hidden;
+.author {
+  font-size: 0.75em;
+  margin: 0.2em;
+  overflow: hidden;
 }
 
-.modal{
+.modal {
   &_show {
     display: contents;
-
-  } 
-  &_hide{
-
-display: none;
   }
+  &_hide {
+    display: none;
+  }
+}
+
+.seeMore{
+background-color: v.$googleBlue;
+color: white;
+border:none;
+border-radius: 40px;
+height:6em;
+width:6em;
 }

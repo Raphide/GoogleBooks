@@ -24,7 +24,7 @@ function App() {
           </ModalContextProvider>
         </ItemContextProvider>
       </div>
-      <div className={styles.left}>
+      <div className={styles.right}>
         <RightSide />
       </div>
     </>

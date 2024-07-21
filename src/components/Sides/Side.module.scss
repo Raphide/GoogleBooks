@@ -1,4 +1,5 @@
 @use "../../partials/queries.scss" as q;
+@use "../../partials/variables" as v;
 
 .bar{
     display: flex;
@@ -10,7 +11,7 @@
         height: 230px;
     }
     h1{
-        color: #9AA0A6;
+        color: v.$googleGrey;
         margin: none;
     }
     @include q.phone {
