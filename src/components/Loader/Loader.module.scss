@@ -1,0 +1,33 @@
+.loadbox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 3;
+  
+  
+
+}
+
+.loader {
+  height: 200px;
+  will-change: filter;
+  transition: filter 300ms;
+  animation: loader-spin infinite 2s linear;
+
+}
+
+@keyframes loader-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// @media (prefers-reduced-motion: no-preference) {
+//   img:nth-of-type(1) .loader {
+    
+//   }
+// }

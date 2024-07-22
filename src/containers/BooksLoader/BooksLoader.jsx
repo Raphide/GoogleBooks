@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { ItemContext } from "../../contexts/ItemContextProvider";
 import { getBooks, getBooksByAuthor } from "../../services/getBooks";
 import BookCard from "../../components/BookCard/BookCard";
-import Loader from "../../assets/loader.svg";
+import Loader from "../../components/Loader/Loader";
 import { ModalContext } from "../../contexts/ModalContextProvider";
 import BookModal from "../../components/BookModal/BookModal";
 
@@ -52,7 +52,7 @@ const BooksLoader = () => {
 
   return (
     <>
-      {fetchStatus === "loading" && <p>Loading Books...</p>}
+      {fetchStatus === "loading" && <Loader/>}
       {fetchStatus === "success" &&
         bookData?.books.map((book) => (
           <BookCard key={book.id} book={book} onClick={onClick} />
