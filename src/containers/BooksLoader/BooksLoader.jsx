@@ -42,25 +42,34 @@ const BooksLoader = () => {
   //     });
   // }, [author, page]);
 
-
-
   const onClick = (book) => {
     setSelectedBook(book);
     setModal(!modal);
-  }
-
+  };
 
   return (
     <>
-      {fetchStatus === "loading" && <Loader/>}
+      {fetchStatus === "loading" && <Loader />}
       {fetchStatus === "success" &&
-        bookData?.books.map((book) => (
-          <BookCard key={book.id} book={book} onClick={onClick} />
+        bookData?.books?.map((book) => (
+          <BookCard key={book?.id} book={book} onClick={onClick} />
         ))}
-      {fetchStatus === "failure" && <p style={{color:"red"}}>{error.message}</p>}
-      {modal && <BookModal key={selectedBook.id} book={selectedBook} onClick={onClick} />}
+      {fetchStatus === "failure" && (
+        <p style={{ color: "red" }}>{error.message}</p>
+      )}
+      {modal && (
+        <BookModal
+          key={selectedBook.id}
+          book={selectedBook}
+          onClick={onClick}
+        />
+      )}
     </>
   );
 };
 
 export default BooksLoader;
+
+// 
+//           (<p style={{ color: "red" }}>No more results</p>) &&
+//         
