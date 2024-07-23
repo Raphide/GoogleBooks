@@ -11,3 +11,4 @@ As This project uses the Google Books API I have decided to theme the site with 
 The search bar can take in any term and as such the API will pull in a wide range of results. Type more into the search bar for more specific results.
 
 Note that this is not an official Google application. 
+<a href="https://google-books-sigma.vercel.app/">Live Link</a>
