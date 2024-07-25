@@ -47,8 +47,6 @@
     top: 0;
     height: 50%;
     width: 100%;
-
-    // max-height: 50%;
     background-color: v.$googleRed;
     border-radius: 0px 94px 0px 0px;
     margin: 0em;
@@ -79,6 +77,7 @@
       &:hover {
         background-color: v.$googleRedDark;
         transition: 0.2s ease-in;
+        cursor: pointer;
       }
     }
     .content {
@@ -164,7 +163,6 @@
       }
 
       p {
-        
         max-height: 150px;
         font-size: 1em;
         margin: 0.5em 0em;
@@ -177,7 +175,6 @@
         white-space: pre;
         margin: 0;
         width: 100%;
-        
       }
       .description {
         padding-left: 20px;
@@ -191,28 +188,29 @@
           background: v.$googleBlack;
         }
       }
-      .info{
+      .info {
         align-self: flex-start;
         justify-self: flex-start;
-       max-width: 50%;
+        max-width: 50%;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         text-wrap: wrap;
       }
-      .read{
-       
-      
+      .read {
         width: 100%;
         max-width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-      
-        .links{
-          height:100px;
+
+        .links {
+          height: 100px;
           margin-bottom: 30px;
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }
@@ -221,7 +219,6 @@
   @include q.phone {
     height: 80%;
     width: 95%;
-  
   }
   @include q.laptop {
     height: 600px;

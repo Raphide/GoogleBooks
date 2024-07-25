@@ -27,11 +27,14 @@
         background-color: v.$googleYellow;
         scale: 105%;
         transition: 0.2s ease-in-out;
+        cursor: pointer;
       }
       &:active {
         background-color: v.$googleYellowDark;
         scale: 95%;
-        transition: 0.2s ease-in-out
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+        
       }
     }
 
@@ -40,11 +43,14 @@
         background-color: v.$googleGeen;
         scale: 105%;
         transition: 0.2s ease-in-out;
+        cursor: pointer;
       }
       &:active {
         background-color: v.$googleGeenDark;
         scale: 95%;
-        transition: 0.2s ease-in-out
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+        
       }
       &:disabled{
         background-color: v.$googleGreyLight;
