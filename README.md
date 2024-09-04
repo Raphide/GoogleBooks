@@ -1,5 +1,11 @@
 # GOOGLE BOOKS API SEARCH ENGINE
 
+![GoogleBooks](./src/assets/googlebooks.png)
+
+<a href="https://google-books-sigma.vercel.app/">Live Link</a>
+
+## Requirements / Purpose
+
 Part of the _nology course's project to create a search engine that utilises Google's Google Book API.
 
 This project's purpose is to demostrate my competency with Vite React, React hooks and fetching data from APIs.
@@ -11,4 +17,14 @@ As This project uses the Google Books API I have decided to theme the site with 
 The search bar can take in any term and as such the API will pull in a wide range of results. Type more into the search bar for more specific results.
 
 Note that this is not an official Google application. 
-<a href="https://google-books-sigma.vercel.app/">Live Link</a>
+
+## Change logs
+
+
+### 04/09/2024 - {Theme of changes if applicable}
+
+-   Just adding a better README :)
+
+---
+
+
